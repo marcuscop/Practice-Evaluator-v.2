@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script type="text/javascript" src="index.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoxcnAFDdiYpP3LUr6iIi7C6SqVmQuuJg&callback=initMap"
+        type="text/javascript">
+    </script>
+
+
+  </head>
+  <body>
+
+    <div id="map" style="height: 600px;"></div>
+
+    <br>
+    <br>
+
+        <div id="root"></div>
+
+        <div class="content is-large has-text-centered">
+
+            <p>
+            <div class="container is-widescreen">
+            <div class="hero">
+            <div class = "box">
+            <h1>Practice Evaluator</h1>
+            <h6 class="content is-medium" ><i>WPI Mens Rowing</i></h6>
+            </div>
+            </div>
+            </div>
+            </p>
+
+            <p>
+            <div class = "container is-widescreen">
+              <div id="stats"></div>
+            </div>
+            </p>
+
+            <p>
+            <div class="container is-widescreen">
+            <div class="hero">
+            <div class = "box">
+              <h3>Add GPX file</h3>
+              <p class="content is-small">
+               <form>
+                 <input class="content" type="file" id="gpx" accept=".gpx" onchange="upload_gpx()"/>
+               </form>
+               </p>
+              <p class="field">
+               <p class="content">
+               <div id="submitgpx"></div>
+               </p>
+              </p>
+
+              <h3>Add CSV file</h3>
+              <p class="content is-small">
+               <form>
+                  <input class="content" type="file" id="csv" accept=".csv" onchange="upload_csv()"/>
+               </form>
+              </p>
+              <p class="field">
+               <p class="content">
+               <div id="submitcsv"></div>
+               </p>
+              </p>
+
+              <div class = "field is-group">
+                <p>
+                  <button class="button is-success is-large" onClick="displayPath()">Draw Path</button>
+                </p>
+                <p>
+                <button class="button is-link" onClick="toggleInfoWindows()">Toggle Splits</button>
+                </p>
+              </div>
+
+
+              </div>
+            </div>
+            </div>
+            </p>
+
+
+        </div>
+
+  </body>
+</html>
